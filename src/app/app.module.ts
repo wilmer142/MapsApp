@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MapComponent } from './components/map/map.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +15,10 @@ import { MapComponent } from './components/map/map.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCWJjZMgqIdOCUdhQrNJZLV_I-872wgvBg'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
